@@ -36,15 +36,7 @@
 - (void)showViewController:(NSString *)viewControllerName param:(NSDictionary *)param
 {
     UINavigationController *nvc = [[self class] __expectedVisibleNavigationController];
-    
-    UIViewController *vc = nil;
-
-    if (viewControllerName) {
-        
-        vc = [NSClassFromString(viewControllerName) new];
-        
-    }
-    
+    UIViewController *vc = [self getViewControllerWithControllerName:viewControllerName];
     if (vc) {
         
         if (nvc) {
@@ -57,6 +49,14 @@
         }
     }
 
+}
+
+- (UIViewController *)getViewControllerWithControllerName:(NSString *)name
+{
+    if (name) {
+        return [NSClassFromString(name) new];
+    }
+    return nil;
 }
 
 - (void)__pressntVController:(UIViewController *)vc parameters:(NSDictionary *)parameters animated:(BOOL)animated
@@ -474,11 +474,18 @@
     return result;
 }
 
+- (void)setRootViewControllerWithControllerName:(NSString *)controllerName
+{
+    [self setRootViewController:[self getViewControllerWithControllerName:controllerName]];
+}
+
 #pragma mark - getter / setter
 - (void)setRootViewController:(UIViewController *)rootViewController
 {
+    
     [UIApplication sharedApplication].delegate.window.rootViewController = rootViewController;
     [[UIApplication sharedApplication].delegate.window makeKeyAndVisible];
+    
 }
 
 - (UIViewController *)rootViewController

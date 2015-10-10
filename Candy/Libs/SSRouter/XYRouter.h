@@ -40,6 +40,8 @@ typedef UIViewController *  (^XYRouterBlock)();
 /// 默认有个返回实际显示navigationController的方法. 你也可以在重写这个方法,以返回你期望的 navigationController
 + (UINavigationController *)expectedVisibleNavigationController;
 
+- (UIViewController *)getViewControllerWithControllerName:(NSString *)name;
+- (void)setRootViewControllerWithControllerName:(NSString *)controllerName;
 - (void)showViewController:(NSString *)viewControllerName param:(NSDictionary *)param;
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5B96E01BC7AE7C00C947F3 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96DF1BC7AE7C00C947F3 /* HttpClient.m */; settings = {ASSET_TAGS = (); }; };
+		3F5B96E31BC7AEA600C947F3 /* Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96E21BC7AEA600C947F3 /* Core.m */; settings = {ASSET_TAGS = (); }; };
 		3FC3BED21BC79A2100E498F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BED11BC79A2100E498F8 /* main.m */; };
 		3FC3BED51BC79A2100E498F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BED41BC79A2100E498F8 /* AppDelegate.m */; };
 		3FC3BEDD1BC79A2100E498F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3BEDC1BC79A2100E498F8 /* Assets.xcassets */; };
@@ -14,6 +16,9 @@
 		3FC3BEEB1BC79A2100E498F8 /* CandyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BEEA1BC79A2100E498F8 /* CandyTests.m */; };
 		3FC3BEF61BC79A2100E498F8 /* CandyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BEF51BC79A2100E498F8 /* CandyUITests.m */; };
 		3FC3BF0C1BC79D2000E498F8 /* XYRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BF0B1BC79D2000E498F8 /* XYRouter.m */; settings = {ASSET_TAGS = (); }; };
+		3FC3BF101BC79F0200E498F8 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BF0F1BC79F0200E498F8 /* RootTabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		3FC3BF141BC79FCB00E498F8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BF131BC79FCB00E498F8 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3FC3BF181BC79FF900E498F8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BF171BC79FF900E498F8 /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7A2B71DA15011093610939B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4965E4C9B2C89E3E0B5786 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F5B96DE1BC7AE7C00C947F3 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		3F5B96DF1BC7AE7C00C947F3 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		3F5B96E11BC7AEA600C947F3 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		3F5B96E21BC7AEA600C947F3 /* Core.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Core.m; sourceTree = "<group>"; };
 		3FC3BECD1BC79A2100E498F8 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC3BED11BC79A2100E498F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FC3BED31BC79A2100E498F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +60,12 @@
 		3FC3BF0A1BC79D2000E498F8 /* XYRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRouter.h; sourceTree = "<group>"; };
 		3FC3BF0B1BC79D2000E498F8 /* XYRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRouter.m; sourceTree = "<group>"; };
 		3FC3BF0D1BC79D5300E498F8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3FC3BF0E1BC79F0200E498F8 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
+		3FC3BF0F1BC79F0200E498F8 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
+		3FC3BF121BC79FCB00E498F8 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3FC3BF131BC79FCB00E498F8 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		3FC3BF161BC79FF900E498F8 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		3FC3BF171BC79FF900E498F8 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		6AE9BF5F6F3324B549C875A1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8F4965E4C9B2C89E3E0B5786 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE2C6DD0F433E56FF8896C9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F5B96DD1BC7AE7C00C947F3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3F5B96DE1BC7AE7C00C947F3 /* HttpClient.h */,
+				3F5B96DF1BC7AE7C00C947F3 /* HttpClient.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		3FC3BEC41BC79A2100E498F8 = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +183,10 @@
 		3FC3BF041BC79BC100E498F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3FC3BF111BC79FA500E498F8 /* HomeViewController */,
 				3FC3BF071BC79C8100E498F8 /* RootViewController */,
+				3FC3BF161BC79FF900E498F8 /* SecondViewController.h */,
+				3FC3BF171BC79FF900E498F8 /* SecondViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -167,6 +194,9 @@
 		3FC3BF051BC79BC100E498F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3F5B96DD1BC7AE7C00C947F3 /* Network */,
+				3F5B96E11BC7AEA600C947F3 /* Core.h */,
+				3F5B96E21BC7AEA600C947F3 /* Core.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +211,8 @@
 		3FC3BF071BC79C8100E498F8 /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3FC3BF0E1BC79F0200E498F8 /* RootTabBarController.h */,
+				3FC3BF0F1BC79F0200E498F8 /* RootTabBarController.m */,
 			);
 			path = RootViewController;
 			sourceTree = "<group>";
@@ -200,6 +232,15 @@
 				3FC3BF0B1BC79D2000E498F8 /* XYRouter.m */,
 			);
 			path = SSRouter;
+			sourceTree = "<group>";
+		};
+		3FC3BF111BC79FA500E498F8 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3FC3BF121BC79FCB00E498F8 /* HomeViewController.h */,
+				3FC3BF131BC79FCB00E498F8 /* HomeViewController.m */,
+			);
+			name = HomeViewController;
 			sourceTree = "<group>";
 		};
 		E1EFB1AF2C5A98FD44769434 /* Pods */ = {
@@ -383,8 +424,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC3BF181BC79FF900E498F8 /* SecondViewController.m in Sources */,
 				3FC3BED51BC79A2100E498F8 /* AppDelegate.m in Sources */,
+				3F5B96E31BC7AEA600C947F3 /* Core.m in Sources */,
+				3FC3BF101BC79F0200E498F8 /* RootTabBarController.m in Sources */,
 				3FC3BED21BC79A2100E498F8 /* main.m in Sources */,
+				3FC3BF141BC79FCB00E498F8 /* HomeViewController.m in Sources */,
+				3F5B96E01BC7AE7C00C947F3 /* HttpClient.m in Sources */,
 				3FC3BF0C1BC79D2000E498F8 /* XYRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
