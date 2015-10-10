@@ -10,4 +10,13 @@
 
 @interface Core : NSObject
 
++ (id)share;
+
+
+- (void)httpGetMeinvListWithNum:(NSNumber *)num
+                        success:(void(^)(NSDictionary *responseObject))success
+                        failure:(void(^)(NSString *errorCode,
+                                         NSString*errorMsg,
+                                         NSDictionary*responseObject))failure;
+
 @end

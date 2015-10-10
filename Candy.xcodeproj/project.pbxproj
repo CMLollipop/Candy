@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F5B96E01BC7AE7C00C947F3 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96DF1BC7AE7C00C947F3 /* HttpClient.m */; settings = {ASSET_TAGS = (); }; };
 		3F5B96E31BC7AEA600C947F3 /* Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96E21BC7AEA600C947F3 /* Core.m */; settings = {ASSET_TAGS = (); }; };
+		3F5B96E71BC8C31E00C947F3 /* MeinvListService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96E61BC8C31E00C947F3 /* MeinvListService.m */; settings = {ASSET_TAGS = (); }; };
 		3FC3BED21BC79A2100E498F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BED11BC79A2100E498F8 /* main.m */; };
 		3FC3BED51BC79A2100E498F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BED41BC79A2100E498F8 /* AppDelegate.m */; };
 		3FC3BEDD1BC79A2100E498F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3BEDC1BC79A2100E498F8 /* Assets.xcassets */; };
@@ -44,6 +45,8 @@
 		3F5B96DF1BC7AE7C00C947F3 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
 		3F5B96E11BC7AEA600C947F3 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		3F5B96E21BC7AEA600C947F3 /* Core.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Core.m; sourceTree = "<group>"; };
+		3F5B96E51BC8C31E00C947F3 /* MeinvListService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeinvListService.h; sourceTree = "<group>"; };
+		3F5B96E61BC8C31E00C947F3 /* MeinvListService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeinvListService.m; sourceTree = "<group>"; };
 		3FC3BECD1BC79A2100E498F8 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC3BED11BC79A2100E498F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FC3BED31BC79A2100E498F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,6 +107,15 @@
 				3F5B96DF1BC7AE7C00C947F3 /* HttpClient.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		3F5B96E41BC8C30500C947F3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3F5B96E51BC8C31E00C947F3 /* MeinvListService.h */,
+				3F5B96E61BC8C31E00C947F3 /* MeinvListService.m */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3FC3BEC41BC79A2100E498F8 = {
@@ -194,6 +206,7 @@
 		3FC3BF051BC79BC100E498F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3F5B96E41BC8C30500C947F3 /* Services */,
 				3F5B96DD1BC7AE7C00C947F3 /* Network */,
 				3F5B96E11BC7AEA600C947F3 /* Core.h */,
 				3F5B96E21BC7AEA600C947F3 /* Core.m */,
@@ -426,6 +439,7 @@
 			files = (
 				3FC3BF181BC79FF900E498F8 /* SecondViewController.m in Sources */,
 				3FC3BED51BC79A2100E498F8 /* AppDelegate.m in Sources */,
+				3F5B96E71BC8C31E00C947F3 /* MeinvListService.m in Sources */,
 				3F5B96E31BC7AEA600C947F3 /* Core.m in Sources */,
 				3FC3BF101BC79F0200E498F8 /* RootTabBarController.m in Sources */,
 				3FC3BED21BC79A2100E498F8 /* main.m in Sources */,

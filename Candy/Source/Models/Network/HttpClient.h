@@ -19,20 +19,20 @@
                        NSString*errorMsg,
                        NSDictionary*responseObject))failure;
 
-- (void)doPost:(NSString *)URLString
-        params:(NSDictionary *)params
-       success:(void(^)(NSDictionary *responseObject))success
-       failure:(void(^)(NSString *errorCode,
-                        NSString*errorMsg,
-                        NSDictionary*responseObject))failure;
-
-
-- (void)uploadResource:(NSString *)URLString
-                params:(NSDictionary *)params
-              resource:(NSArray *)resources
-               success:(void(^)(NSDictionary *responseObject))success
-               failure:(void(^)(NSString *errorCode,
-                                NSString*errorMsg,
-                                NSDictionary*responseObject))failure;
+//- (void)doPost:(NSString *)URLString
+//        params:(NSDictionary *)params
+//       success:(void(^)(NSDictionary *responseObject))success
+//       failure:(void(^)(NSString *errorCode,
+//                        NSString*errorMsg,
+//                        NSDictionary*responseObject))failure;
+//
+//
+//- (void)uploadResource:(NSString *)URLString
+//                params:(NSDictionary *)params
+//              resource:(NSArray *)resources
+//               success:(void(^)(NSDictionary *responseObject))success
+//               failure:(void(^)(NSString *errorCode,
+//                                NSString*errorMsg,
+//                                NSDictionary*responseObject))failure;
 
 @end
