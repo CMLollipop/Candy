@@ -32,13 +32,8 @@
     MeinvListService *service = [[MeinvListService alloc]init];
     NSDictionary *param = @{@"num":num};
     [service getMeinvListWithParam:param
-                           success:^(NSDictionary *responseObject) {
-        
-    } failure:^(NSString *errorCode,
-                NSString *errorMsg,
-                NSDictionary *responseObject) {
-        
-    }];
+                           success:success
+                           failure:failure];
 }
 
 @end

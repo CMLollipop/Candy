@@ -67,12 +67,13 @@
         
               NSLog(@"%@",_manager.requestSerializer.HTTPRequestHeaders);
               NSLog(@"%@",responseObject);
+              success(responseObject);
               
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
         
         NSLog(@"%@",_manager.requestSerializer.HTTPRequestHeaders);
         NSLog(@"%@",error);
-
+        failure(NotReachableCode,NotReachableMsg,nil);
     }];
     
     

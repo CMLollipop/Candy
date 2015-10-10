@@ -10,6 +10,10 @@
 		3F5B96E01BC7AE7C00C947F3 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96DF1BC7AE7C00C947F3 /* HttpClient.m */; settings = {ASSET_TAGS = (); }; };
 		3F5B96E31BC7AEA600C947F3 /* Core.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96E21BC7AEA600C947F3 /* Core.m */; settings = {ASSET_TAGS = (); }; };
 		3F5B96E71BC8C31E00C947F3 /* MeinvListService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96E61BC8C31E00C947F3 /* MeinvListService.m */; settings = {ASSET_TAGS = (); }; };
+		3F5B96EB1BC8F70600C947F3 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96E91BC8F70600C947F3 /* HomeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F5B96EC1BC8F70600C947F3 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F5B96EA1BC8F70600C947F3 /* HomeTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F5B96F01BC8FA5500C947F3 /* MeinvModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96EE1BC8FA5500C947F3 /* MeinvModel.m */; settings = {ASSET_TAGS = (); }; };
+		3F5B96F41BC902CF00C947F3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96F31BC902CF00C947F3 /* WebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3FC3BED21BC79A2100E498F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BED11BC79A2100E498F8 /* main.m */; };
 		3FC3BED51BC79A2100E498F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BED41BC79A2100E498F8 /* AppDelegate.m */; };
 		3FC3BEDD1BC79A2100E498F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3BEDC1BC79A2100E498F8 /* Assets.xcassets */; };
@@ -47,6 +51,13 @@
 		3F5B96E21BC7AEA600C947F3 /* Core.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Core.m; sourceTree = "<group>"; };
 		3F5B96E51BC8C31E00C947F3 /* MeinvListService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeinvListService.h; sourceTree = "<group>"; };
 		3F5B96E61BC8C31E00C947F3 /* MeinvListService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeinvListService.m; sourceTree = "<group>"; };
+		3F5B96E81BC8F70600C947F3 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		3F5B96E91BC8F70600C947F3 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		3F5B96EA1BC8F70600C947F3 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		3F5B96EE1BC8FA5500C947F3 /* MeinvModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeinvModel.m; sourceTree = "<group>"; };
+		3F5B96EF1BC8FA5500C947F3 /* MeinvModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeinvModel.h; sourceTree = "<group>"; };
+		3F5B96F21BC902CF00C947F3 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		3F5B96F31BC902CF00C947F3 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		3FC3BECD1BC79A2100E498F8 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC3BED11BC79A2100E498F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FC3BED31BC79A2100E498F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +127,24 @@
 				3F5B96E61BC8C31E00C947F3 /* MeinvListService.m */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		3F5B96ED1BC8FA4300C947F3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3F5B96EE1BC8FA5500C947F3 /* MeinvModel.m */,
+				3F5B96EF1BC8FA5500C947F3 /* MeinvModel.h */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		3F5B96F11BC9029100C947F3 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				3F5B96F21BC902CF00C947F3 /* WebViewController.h */,
+				3F5B96F31BC902CF00C947F3 /* WebViewController.m */,
+			);
+			name = WebView;
 			sourceTree = "<group>";
 		};
 		3FC3BEC41BC79A2100E498F8 = {
@@ -195,6 +224,7 @@
 		3FC3BF041BC79BC100E498F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3F5B96F11BC9029100C947F3 /* WebView */,
 				3FC3BF111BC79FA500E498F8 /* HomeViewController */,
 				3FC3BF071BC79C8100E498F8 /* RootViewController */,
 				3FC3BF161BC79FF900E498F8 /* SecondViewController.h */,
@@ -206,6 +236,7 @@
 		3FC3BF051BC79BC100E498F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3F5B96ED1BC8FA4300C947F3 /* Entity */,
 				3F5B96E41BC8C30500C947F3 /* Services */,
 				3F5B96DD1BC7AE7C00C947F3 /* Network */,
 				3F5B96E11BC7AEA600C947F3 /* Core.h */,
@@ -217,6 +248,9 @@
 		3FC3BF061BC79BC100E498F8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3F5B96E81BC8F70600C947F3 /* HomeTableViewCell.h */,
+				3F5B96E91BC8F70600C947F3 /* HomeTableViewCell.m */,
+				3F5B96EA1BC8F70600C947F3 /* HomeTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -379,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC3BEE01BC79A2100E498F8 /* LaunchScreen.storyboard in Resources */,
+				3F5B96EC1BC8F70600C947F3 /* HomeTableViewCell.xib in Resources */,
 				3FC3BEDD1BC79A2100E498F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,13 +474,16 @@
 			files = (
 				3FC3BF181BC79FF900E498F8 /* SecondViewController.m in Sources */,
 				3FC3BED51BC79A2100E498F8 /* AppDelegate.m in Sources */,
+				3F5B96EB1BC8F70600C947F3 /* HomeTableViewCell.m in Sources */,
 				3F5B96E71BC8C31E00C947F3 /* MeinvListService.m in Sources */,
 				3F5B96E31BC7AEA600C947F3 /* Core.m in Sources */,
 				3FC3BF101BC79F0200E498F8 /* RootTabBarController.m in Sources */,
 				3FC3BED21BC79A2100E498F8 /* main.m in Sources */,
+				3F5B96F41BC902CF00C947F3 /* WebViewController.m in Sources */,
 				3FC3BF141BC79FCB00E498F8 /* HomeViewController.m in Sources */,
 				3F5B96E01BC7AE7C00C947F3 /* HttpClient.m in Sources */,
 				3FC3BF0C1BC79D2000E498F8 /* XYRouter.m in Sources */,
+				3F5B96F01BC8FA5500C947F3 /* MeinvModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

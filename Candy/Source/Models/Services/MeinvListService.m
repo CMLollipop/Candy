@@ -8,6 +8,7 @@
 
 #import "MeinvListService.h"
 #import "HttpClient.h"
+#import "MeinvModel.h"
 
 @implementation MeinvListService
 
@@ -22,12 +23,35 @@
                       params:param
                      success:^(NSDictionary *responseObject) {
                          
+                         NSString * code = [responseObject objectForKey:@"code"];
+                         NSString * msg =  [responseObject objectForKey:@"msg"];
+                         if (code.integerValue == 200) {
+                             
+                             NSMutableArray *array = [NSMutableArray array];
+                             
+                             for (NSInteger i = 0; i<10; i++) {
+                                 
+                                 NSString *key = [NSString stringWithFormat:@"%li",i];
+                                 id object = [responseObject objectForKey:key];
+                                 if (object) {
+                                     [array addObject:object];
+                                 }
+                                 
+                             }
+                             
+                             NSArray *objectList = [MeinvModel modelObjectListWithArray:array];
+                             success(@{@"meinvList":objectList});
+                         }else
+                         {
+                             failure(code,msg,responseObject);
+                         }
         
     } failure:^(NSString *errorCode,
                 NSString *errorMsg,
                 NSDictionary *responseObject) {
         
-        
+        failure(errorCode,errorMsg,responseObject);
+
     }];
 }
 @end

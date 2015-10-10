@@ -7,11 +7,12 @@
 //
 
 #import "HomeViewController.h"
-
+#import "HomeTableViewCell.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)UITableView *myTableView;
+@property(nonatomic,strong)NSArray *dataSource;
 
 @end
 
@@ -22,13 +23,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.myTableView];
     
-//    [[Core share]httpGetMeinvListWithNum:@10
-//                                 success:^(NSDictionary *responseObject) {
-//        
-//    } failure:^(NSString *errorCode, NSString *errorMsg, NSDictionary *responseObject) {
-//        
-//    }];
+    [[Core share]httpGetMeinvListWithNum:@10
+                                 success:^(NSDictionary *responseObject) {
+                                     
+                                     _dataSource = [responseObject objectForKey:@"meinvList"];
+                                     [_myTableView reloadData];
+                                     
+    } failure:^(NSString *errorCode, NSString *errorMsg, NSDictionary *responseObject) {
+        
+        
+    }];
     
 }
 
@@ -44,34 +50,35 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return _dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier = @"UITableViewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"HomeTableViewCell" owner:self options:nil]lastObject];
+//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
     }
+    [cell reloadData:_dataSource[indexPath.row]];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    return 90;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    MeinvModel *model = _dataSource[indexPath.row];
+    [[XYRouter sharedInstance]showViewController:@"WebViewController" param:@{@"URLString":model.mUrl}];
 }
-
 
 - (UITableView *)myTableView
 {
@@ -83,6 +90,7 @@
     _myTableView.delegate = self;
     _myTableView.dataSource = self;
     return _myTableView;
+    
 }
 
 
