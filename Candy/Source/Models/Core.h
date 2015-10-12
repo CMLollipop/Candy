@@ -20,4 +20,11 @@
                                          NSString*errorMsg,
                                          NSDictionary*responseObject))failure;
 
+- (void)httpGetTiyuListWithNum:(NSNumber *)num
+                   lastObjectId:(NSNumber *)objectId
+                        success:(void(^)(NSDictionary *responseObject))success
+                        failure:(void(^)(NSString *errorCode,
+                                         NSString*errorMsg,
+                                         NSDictionary*responseObject))failure;
+
 @end

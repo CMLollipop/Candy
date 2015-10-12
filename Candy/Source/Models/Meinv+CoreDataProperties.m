@@ -13,10 +13,11 @@
 
 @implementation Meinv (CoreDataProperties)
 
-@dynamic mTitle;
-@dynamic mObjectId;
 @dynamic mDescription;
-@dynamic mUrl;
+@dynamic mObjectId;
 @dynamic mPicUrl;
+@dynamic mTitle;
+@dynamic mUrl;
+@dynamic mType;
 
 @end

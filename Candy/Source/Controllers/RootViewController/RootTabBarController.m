@@ -27,7 +27,9 @@
     NSArray *viewControllerNames = @[@"HomeViewController",@"SecondViewController"];
     
     
-    NSArray *tabBarImages = @[@"home",@"article"];
+    NSArray *tabBarImages = @[@"lingerie_L",@"article"];
+    NSArray *tabBarTitles = @[@"每日美女",@"奇闻趣事"];
+
 
     NSMutableArray *controllers = [NSMutableArray array];
     
@@ -41,10 +43,12 @@
             [controllers addObject:nvc];
             
             NSString *imageName = [tabBarImages objectAtIndex:i];
+            NSString *selectImageName = [NSString stringWithFormat:@"%@_sel",imageName];
+            NSString *title = [tabBarTitles objectAtIndex:i];
             [self setViewController:nvc
             tabBarItemImageWithName:imageName
-         tabBarItemSelImageWithName:imageName
-                    tabBarItemTitle:@"123"];
+         tabBarItemSelImageWithName:selectImageName
+                    tabBarItemTitle:title];
         }
         i++;
 
@@ -67,10 +71,10 @@ tabBarItemSelImageWithName:(NSString *)imageNameSel
                                    imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.image = [[UIImage imageNamed:imageName]
                            imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    NSDictionary *normal = [NSDictionary  dictionaryWithObjectsAndKeys:ColorWithWhite(116.0),NSForegroundColorAttributeName, nil];
-    [vc.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
-    NSDictionary *select = [NSDictionary  dictionaryWithObjectsAndKeys:ColorWithRGB(253.0, 189.0, 54.0),NSForegroundColorAttributeName, nil];
-    [vc.tabBarItem setTitleTextAttributes:select forState:UIControlStateSelected];
+//    NSDictionary *normal = [NSDictionary  dictionaryWithObjectsAndKeys:ColorWithWhite(116.0),NSForegroundColorAttributeName, nil];
+//    [vc.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
+//    NSDictionary *select = [NSDictionary  dictionaryWithObjectsAndKeys:ColorWithRGB(253.0, 189.0, 54.0),NSForegroundColorAttributeName, nil];
+//    [vc.tabBarItem setTitleTextAttributes:select forState:UIControlStateSelected];
     [vc.tabBarItem setTitle:title];
 }
 

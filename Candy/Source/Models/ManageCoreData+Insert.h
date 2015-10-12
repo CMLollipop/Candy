@@ -11,6 +11,7 @@
 @interface ManageCoreData (Insert)
 
 - (void)insertMeinvList:(NSArray *)objectList
+                   type:(NSNumber *)type
            successBlock:(void(^)(NSDictionary *result))success
            failueBlock:(void(^)(NSDictionary *result))failue;
 

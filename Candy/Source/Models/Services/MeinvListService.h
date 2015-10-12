@@ -15,4 +15,13 @@
                     failure:(void(^)(NSString *errorCode,
                                      NSString*errorMsg,
                                      NSDictionary*responseObject))failure;
+
+- (void)getTiyuListWithParam:(NSDictionary *)param
+                      success:(void(^)(NSDictionary *responseObject))success
+                      failure:(void(^)(NSString *errorCode,
+                                       NSString*errorMsg,
+                                       NSDictionary*responseObject))failure;
+
+
+
 @end

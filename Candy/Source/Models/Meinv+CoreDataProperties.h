@@ -15,11 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Meinv (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *mTitle;
-@property (nullable, nonatomic, retain) NSNumber *mObjectId;
 @property (nullable, nonatomic, retain) NSString *mDescription;
-@property (nullable, nonatomic, retain) NSString *mUrl;
+@property (nullable, nonatomic, retain) NSNumber *mObjectId;
 @property (nullable, nonatomic, retain) NSString *mPicUrl;
+@property (nullable, nonatomic, retain) NSString *mTitle;
+@property (nullable, nonatomic, retain) NSString *mUrl;
+@property (nullable, nonatomic, retain) NSNumber *mType;
 
 @end
 

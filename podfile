@@ -4,4 +4,4 @@ inhibit_all_warnings!
 pod 'AFNetworking'
 pod 'SVProgressHUD'
 pod 'MJRefresh', '~> 1.3.7'
-pod 'MWPhotoBrowser'
+pod 'MJPhotoBrowser', '~> 1.0.1'

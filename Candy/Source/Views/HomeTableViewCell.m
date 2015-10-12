@@ -11,7 +11,6 @@
 
 @interface HomeTableViewCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageV;
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
 @property (weak, nonatomic) IBOutlet UILabel *contentLab;
 
@@ -21,6 +20,17 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    UITapGestureRecognizer *tap  = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onImageTap)];
+    [_imageV addGestureRecognizer:tap];
+    _imageV.userInteractionEnabled = YES;
+}
+
+- (void)onImageTap
+{
+    if ([self.delegate respondsToSelector:@selector(homeTableViewCellDidSelectImage:)]) {
+        
+        [self.delegate homeTableViewCellDidSelectImage:self];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -29,8 +39,9 @@
     // Configure the view for the selected state
 }
 
-- (void)reloadData:(MeinvModel *)model
+- (void)reloadData:(Meinv *)model
 {
+    _model = model;
     NSLog(@"%@",model.mDescription);
 //    _imageV 
     _contentLab.numberOfLines = 0;

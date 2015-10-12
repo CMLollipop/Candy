@@ -16,6 +16,7 @@
 @implementation ManageCoreData (Insert)
 
 - (void)insertMeinvList:(NSArray *)objectList
+                   type:(NSNumber *)type
            successBlock:(void(^)(NSDictionary *result))success
             failueBlock:(void(^)(NSDictionary *result))failue
 {
@@ -25,6 +26,7 @@
         for (NSDictionary *dict in objectList) {
             NSManagedObject *entity = [moc createEntity:@"Meinv"];
             [entity setValuesForKeysWithDictionary:dict];
+            [entity setValue:type forKey:@"mType"];
         }
         
         

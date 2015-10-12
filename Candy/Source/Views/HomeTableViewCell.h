@@ -7,10 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MeinvModel.h"
+#import "Meinv.h"
+
+@class HomeTableViewCell;
+@protocol HomeTableViewCellDelegate <NSObject>
+
+- (void)homeTableViewCellDidSelectImage:(HomeTableViewCell *)cell;
+
+@end
 
 @interface HomeTableViewCell : UITableViewCell
 
-- (void)reloadData:(MeinvModel *)model;
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
+@property(nonatomic,weak)id<HomeTableViewCellDelegate> delegate;
+@property(nonatomic,strong)Meinv *model;
+
+- (void)reloadData:(Meinv *)model;
+
 
 @end
+

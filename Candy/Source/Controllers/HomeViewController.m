@@ -11,8 +11,10 @@
 #import "ManageCoreData.h"
 #import "UITableView+FetchResult.h"
 #import "Meinv.h"
+#import <MJPhotoBrowser.h>
+#import <MJPhoto.h>
 
-@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,HomeTableViewCellDelegate>
 
 @property(nonatomic,strong)UITableView *myTableView;
 @property(nonatomic,strong)NSArray *dataSource;
@@ -28,6 +30,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.myTableView];
+    self.navigationItem.title = @"每日美女";
     [_myTableView.header beginRefreshing];
     NSError *error;
     
@@ -52,8 +55,6 @@
                                          [_myTableView.header endRefreshing];
                                          
                                      }
-                                     
-
                                      
                                  } failure:^(NSString *errorCode, NSString *errorMsg, NSDictionary *responseObject) {
                                      
@@ -110,6 +111,7 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"HomeTableViewCell" owner:self options:nil]lastObject];
         
     }
+    cell.delegate = self;
     [cell reloadData:[self.fetchResult objectAtIndexPath:indexPath]];
     
     return cell;
@@ -123,7 +125,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    MeinvModel *model = _dataSource[indexPath.row];
+    Meinv *model = [self.fetchResult objectAtIndexPath:indexPath];
     [[XYRouter sharedInstance]showViewController:@"WebViewController" param:@{@"URLString":model.mUrl}];
 }
 
@@ -137,7 +139,7 @@
     _myTableView.delegate = self;
     _myTableView.dataSource = self;
     [_myTableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(refresh)];
-    [_myTableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
+//    [_myTableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
 
     return _myTableView;
     
@@ -151,10 +153,23 @@
     }
     
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"mObjectId" ascending:NO];
-    _fetchResult = [self.myTableView fetchResultWithEntityName:@"Meinv" predicate:nil SortDescriptors:@[sort]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"mType == %@",@1];
+    _fetchResult = [self.myTableView fetchResultWithEntityName:@"Meinv" predicate:predicate SortDescriptors:@[sort]];
     
     return _fetchResult;
 }
+
+- (void)homeTableViewCellDidSelectImage:(HomeTableViewCell *)cell
+{
+    MJPhoto *photo = [[MJPhoto alloc]init];
+    photo.srcImageView = cell.imageV;
+    photo.url = [NSURL URLWithString:cell.model.mPicUrl];
+    MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
+    browser.currentPhotoIndex = 0;
+    browser.photos = @[photo].mutableCopy;
+    [browser show];
+}
+
 /*
 #pragma mark - Navigation
 
