@@ -33,6 +33,21 @@ NSString *const kMeinvModelMPicUrl = @"picUrl";
     return array;
 }
 
++ (NSArray *)arrayWithModelObjectList:(NSArray *)arr
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    if ([arr isKindOfClass:[NSArray class]]) {
+        
+        for (MeinvModel *model in arr) {
+            
+            [array addObject:[model dictionaryRepresentation]];
+        }
+    }
+    return array;
+}
+
+
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
 {
@@ -76,13 +91,19 @@ NSString *const kMeinvModelMPicUrl = @"picUrl";
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
 
-    [mutableDict setValue:self.mTitle forKey:kMeinvModelMTitle];
-    [mutableDict setValue:self.mObjectId forKey:kMeinvModelMObjectId];
-    [mutableDict setValue:self.mDescription forKey:kMeinvModelMDescription];
-    [mutableDict setValue:self.mUrl forKey:kMeinvModelMUrl];
-    [mutableDict setValue:self.mPicUrl forKey:kMeinvModelMPicUrl];
-
+    [mutableDict setValue:self.mTitle forKey:[self uppercaseFirstChar:kMeinvModelMTitle]];
+    [mutableDict setValue:self.mObjectId forKey:[self uppercaseFirstChar:kMeinvModelMObjectId]];
+    [mutableDict setValue:self.mDescription forKey:[self uppercaseFirstChar:kMeinvModelMDescription]];
+    [mutableDict setValue:self.mUrl forKey:[self uppercaseFirstChar:kMeinvModelMUrl]];
+    [mutableDict setValue:self.mPicUrl forKey:[self uppercaseFirstChar:kMeinvModelMPicUrl]];
     return [NSDictionary dictionaryWithDictionary:mutableDict];
+}
+
+
+
+-(NSString *)uppercaseFirstChar:(NSString *)str
+{
+    return [NSString stringWithFormat:@"m%@%@",[[str substringToIndex:1] uppercaseString],[str substringWithRange:NSMakeRange(1, str.length-1)]];
 }
 
 @end

@@ -16,6 +16,12 @@
 		3F5B96F41BC902CF00C947F3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96F31BC902CF00C947F3 /* WebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3F65DE081BCB5B3B0090E843 /* Candy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F65DE061BCB5B3B0090E843 /* Candy.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		3F65DE0D1BCB5FCD0090E843 /* ManageCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F65DE0C1BCB5FCD0090E843 /* ManageCoreData.m */; settings = {ASSET_TAGS = (); }; };
+		3F65DE101BCB631B0090E843 /* ManageCoreData+Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F65DE0F1BCB631B0090E843 /* ManageCoreData+Insert.m */; settings = {ASSET_TAGS = (); }; };
+		3F65DE161BCB66C60090E843 /* NSManagedObject+EntityCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F65DE131BCB66C60090E843 /* NSManagedObject+EntityCreate.m */; settings = {ASSET_TAGS = (); }; };
+		3F65DE171BCB66C60090E843 /* NSManagedObjectContext+Help.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F65DE151BCB66C60090E843 /* NSManagedObjectContext+Help.m */; settings = {ASSET_TAGS = (); }; };
+		3F65DE1C1BCB67070090E843 /* Meinv+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F65DE191BCB67070090E843 /* Meinv+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		3F65DE1D1BCB67070090E843 /* Meinv.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F65DE1B1BCB67070090E843 /* Meinv.m */; settings = {ASSET_TAGS = (); }; };
+		3F65DE201BCB691A0090E843 /* UITableView+FetchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F65DE1F1BCB691A0090E843 /* UITableView+FetchResult.m */; settings = {ASSET_TAGS = (); }; };
 		3FC3BED21BC79A2100E498F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BED11BC79A2100E498F8 /* main.m */; };
 		3FC3BED51BC79A2100E498F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BED41BC79A2100E498F8 /* AppDelegate.m */; };
 		3FC3BEDD1BC79A2100E498F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3BEDC1BC79A2100E498F8 /* Assets.xcassets */; };
@@ -83,6 +89,18 @@
 		3F65DE071BCB5B3B0090E843 /* Candy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Candy.xcdatamodel; sourceTree = "<group>"; };
 		3F65DE0B1BCB5FCD0090E843 /* ManageCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCoreData.h; sourceTree = "<group>"; };
 		3F65DE0C1BCB5FCD0090E843 /* ManageCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCoreData.m; sourceTree = "<group>"; };
+		3F65DE0E1BCB631B0090E843 /* ManageCoreData+Insert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ManageCoreData+Insert.h"; sourceTree = "<group>"; };
+		3F65DE0F1BCB631B0090E843 /* ManageCoreData+Insert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ManageCoreData+Insert.m"; sourceTree = "<group>"; };
+		3F65DE121BCB66C60090E843 /* NSManagedObject+EntityCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+EntityCreate.h"; sourceTree = "<group>"; };
+		3F65DE131BCB66C60090E843 /* NSManagedObject+EntityCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+EntityCreate.m"; sourceTree = "<group>"; };
+		3F65DE141BCB66C60090E843 /* NSManagedObjectContext+Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Help.h"; sourceTree = "<group>"; };
+		3F65DE151BCB66C60090E843 /* NSManagedObjectContext+Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Help.m"; sourceTree = "<group>"; };
+		3F65DE181BCB67070090E843 /* Meinv+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Meinv+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F65DE191BCB67070090E843 /* Meinv+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Meinv+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F65DE1A1BCB67070090E843 /* Meinv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meinv.h; sourceTree = "<group>"; };
+		3F65DE1B1BCB67070090E843 /* Meinv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meinv.m; sourceTree = "<group>"; };
+		3F65DE1E1BCB691A0090E843 /* UITableView+FetchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FetchResult.h"; sourceTree = "<group>"; };
+		3F65DE1F1BCB691A0090E843 /* UITableView+FetchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FetchResult.m"; sourceTree = "<group>"; };
 		3FC3BECD1BC79A2100E498F8 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC3BED11BC79A2100E498F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FC3BED31BC79A2100E498F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -218,6 +236,7 @@
 		3F65DE051BCB5A7A0090E843 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3F65DE111BCB66B70090E843 /* EntityHelp */,
 				3F65DE0A1BCB5BE30090E843 /* ManageCoreData */,
 				3F65DE091BCB5BD60090E843 /* Entity */,
 				3F65DE061BCB5B3B0090E843 /* Candy.xcdatamodeld */,
@@ -228,6 +247,10 @@
 		3F65DE091BCB5BD60090E843 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				3F65DE181BCB67070090E843 /* Meinv+CoreDataProperties.h */,
+				3F65DE191BCB67070090E843 /* Meinv+CoreDataProperties.m */,
+				3F65DE1A1BCB67070090E843 /* Meinv.h */,
+				3F65DE1B1BCB67070090E843 /* Meinv.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -237,8 +260,21 @@
 			children = (
 				3F65DE0B1BCB5FCD0090E843 /* ManageCoreData.h */,
 				3F65DE0C1BCB5FCD0090E843 /* ManageCoreData.m */,
+				3F65DE0E1BCB631B0090E843 /* ManageCoreData+Insert.h */,
+				3F65DE0F1BCB631B0090E843 /* ManageCoreData+Insert.m */,
 			);
 			name = ManageCoreData;
+			sourceTree = "<group>";
+		};
+		3F65DE111BCB66B70090E843 /* EntityHelp */ = {
+			isa = PBXGroup;
+			children = (
+				3F65DE121BCB66C60090E843 /* NSManagedObject+EntityCreate.h */,
+				3F65DE131BCB66C60090E843 /* NSManagedObject+EntityCreate.m */,
+				3F65DE141BCB66C60090E843 /* NSManagedObjectContext+Help.h */,
+				3F65DE151BCB66C60090E843 /* NSManagedObjectContext+Help.m */,
+			);
+			name = EntityHelp;
 			sourceTree = "<group>";
 		};
 		3FC3BEC41BC79A2100E498F8 = {
@@ -346,6 +382,8 @@
 				3F5B96E81BC8F70600C947F3 /* HomeTableViewCell.h */,
 				3F5B96E91BC8F70600C947F3 /* HomeTableViewCell.m */,
 				3F5B96EA1BC8F70600C947F3 /* HomeTableViewCell.xib */,
+				3F65DE1E1BCB691A0090E843 /* UITableView+FetchResult.h */,
+				3F65DE1F1BCB691A0090E843 /* UITableView+FetchResult.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -620,17 +658,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F65DE171BCB66C60090E843 /* NSManagedObjectContext+Help.m in Sources */,
+				3F65DE1C1BCB67070090E843 /* Meinv+CoreDataProperties.m in Sources */,
 				3FC3BF181BC79FF900E498F8 /* SecondViewController.m in Sources */,
 				3FC3BED51BC79A2100E498F8 /* AppDelegate.m in Sources */,
 				3F5B96EB1BC8F70600C947F3 /* HomeTableViewCell.m in Sources */,
+				3F65DE201BCB691A0090E843 /* UITableView+FetchResult.m in Sources */,
 				3F5B96E71BC8C31E00C947F3 /* MeinvListService.m in Sources */,
 				3F5B96E31BC7AEA600C947F3 /* Core.m in Sources */,
+				3F65DE1D1BCB67070090E843 /* Meinv.m in Sources */,
 				3F65DE0D1BCB5FCD0090E843 /* ManageCoreData.m in Sources */,
 				3FC3BF101BC79F0200E498F8 /* RootTabBarController.m in Sources */,
 				3F65DE081BCB5B3B0090E843 /* Candy.xcdatamodeld in Sources */,
 				3FC3BED21BC79A2100E498F8 /* main.m in Sources */,
 				3F5B96F41BC902CF00C947F3 /* WebViewController.m in Sources */,
+				3F65DE161BCB66C60090E843 /* NSManagedObject+EntityCreate.m in Sources */,
 				3FC3BF141BC79FCB00E498F8 /* HomeViewController.m in Sources */,
+				3F65DE101BCB631B0090E843 /* ManageCoreData+Insert.m in Sources */,
 				3F5B96E01BC7AE7C00C947F3 /* HttpClient.m in Sources */,
 				3FC3BF0C1BC79D2000E498F8 /* XYRouter.m in Sources */,
 				3F5B96F01BC8FA5500C947F3 /* MeinvModel.m in Sources */,

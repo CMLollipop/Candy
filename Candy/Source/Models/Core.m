@@ -24,13 +24,22 @@
 }
 
 - (void)httpGetMeinvListWithNum:(NSNumber *)num
+                   lastObjectId:(NSNumber *)objectId
                         success:(void(^)(NSDictionary *responseObject))success
                         failure:(void(^)(NSString *errorCode,
                                          NSString*errorMsg,
                                          NSDictionary*responseObject))failure
 {
     MeinvListService *service = [[MeinvListService alloc]init];
-    NSDictionary *param = @{@"num":num};
+//    NSDictionary *param = @{@"num":num,@"objectId":objectId};
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    [param setObject:num forKey:@"num"];
+    
+    if (objectId) {
+        
+        [param setObject:objectId forKey:@"objectId"];
+    }
+    
     [service getMeinvListWithParam:param
                            success:success
                            failure:failure];

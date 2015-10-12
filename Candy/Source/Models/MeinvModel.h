@@ -19,7 +19,8 @@
 @property (nonatomic,strong) NSString *mPicUrl;
  
 
-+ (NSArray*)modelObjectListWithArray:(NSArray *)array;
++ (NSArray *)modelObjectListWithArray:(NSArray *)array;
++ (NSArray *)arrayWithModelObjectList:(NSArray *)array;
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (NSDictionary *)dictionaryRepresentation;
 

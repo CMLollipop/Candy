@@ -7,7 +7,6 @@
 //
 
 #import "ManageCoreData.h"
-#import <CoreData/CoreData.h>
 
 @interface ManageCoreData()
 

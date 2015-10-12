@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 static NSString *CoreDataModelName = @"Candy";
 static NSString *CoreDataStoreName  = @"Candy.sqlite";

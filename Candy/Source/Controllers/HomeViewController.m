@@ -8,11 +8,15 @@
 
 #import "HomeViewController.h"
 #import "HomeTableViewCell.h"
+#import "ManageCoreData.h"
+#import "UITableView+FetchResult.h"
+#import "Meinv.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)UITableView *myTableView;
 @property(nonatomic,strong)NSArray *dataSource;
+@property(nonatomic,strong)NSFetchedResultsController *fetchResult;
 
 @end
 
@@ -24,18 +28,58 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.myTableView];
+    [_myTableView.header beginRefreshing];
+    NSError *error;
     
-    [[Core share]httpGetMeinvListWithNum:@20
+    if (![self.fetchResult performFetch:&error]) {
+        
+        NSLog(@"%@",error);
+    }
+}
+
+
+- (void)httpListMeinv:(NSNumber *)lastObjectId
+{
+    [[Core share]httpGetMeinvListWithNum:@10
+                            lastObjectId:lastObjectId
                                  success:^(NSDictionary *responseObject) {
                                      
-                                     _dataSource = [responseObject objectForKey:@"meinvList"];
-                                     [_myTableView reloadData];
+                                     if (lastObjectId)
+                                     {
+                                         [_myTableView.footer endRefreshing];
+                                     }else
+                                     {
+                                         [_myTableView.header endRefreshing];
+                                         
+                                     }
                                      
-    } failure:^(NSString *errorCode, NSString *errorMsg, NSDictionary *responseObject) {
-        
-        
-    }];
-    
+
+                                     
+                                 } failure:^(NSString *errorCode, NSString *errorMsg, NSDictionary *responseObject) {
+                                     
+                                     if (lastObjectId)
+                                     {
+                                         [_myTableView.footer endRefreshing];
+                                     }else
+                                     {
+                                         [_myTableView.header endRefreshing];
+
+                                     }
+                                     
+                                 }];
+
+}
+
+
+- (void)refresh
+{
+    [self httpListMeinv:nil];
+}
+
+- (void)loadMore
+{
+    Meinv *object = self.fetchResult.fetchedObjects.lastObject;
+    [self httpListMeinv:object.mObjectId];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,18 +88,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [[self.fetchResult sections]count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
 {
-    return _dataSource.count;
+    id<NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchResult sections] objectAtIndex:section];
+    return  [sectionInfo numberOfObjects];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -66,7 +110,7 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"HomeTableViewCell" owner:self options:nil]lastObject];
         
     }
-    [cell reloadData:_dataSource[indexPath.row]];
+    [cell reloadData:[self.fetchResult objectAtIndexPath:indexPath]];
     
     return cell;
 }
@@ -92,11 +136,25 @@
     _myTableView = [[UITableView alloc]initWithFrame:SCREEN_BOUNDS style:UITableViewStylePlain];
     _myTableView.delegate = self;
     _myTableView.dataSource = self;
+    [_myTableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(refresh)];
+    [_myTableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
+
     return _myTableView;
     
 }
 
-
+- (NSFetchedResultsController *)fetchResult
+{
+    if (_fetchResult) {
+        
+        return _fetchResult;
+    }
+    
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"mObjectId" ascending:NO];
+    _fetchResult = [self.myTableView fetchResultWithEntityName:@"Meinv" predicate:nil SortDescriptors:@[sort]];
+    
+    return _fetchResult;
+}
 /*
 #pragma mark - Navigation
 

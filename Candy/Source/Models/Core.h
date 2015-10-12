@@ -14,6 +14,7 @@
 
 
 - (void)httpGetMeinvListWithNum:(NSNumber *)num
+                   lastObjectId:(NSNumber *)objectId
                         success:(void(^)(NSDictionary *responseObject))success
                         failure:(void(^)(NSString *errorCode,
                                          NSString*errorMsg,

@@ -20,3 +20,14 @@
 #define SCREEN_HEIGHT [ [ UIScreen mainScreen ] bounds ].size.height
 
 #define APP_SHORT_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
+
+#ifdef DEBUG
+
+#define NSLog(format, ...) NSLog((@"%s [Line %d]"format), __PRETTY_FUNCTION__,__LINE__,## __VA_ARGS__)
+
+#else
+
+#define NSLog(format, ...)
+
+#endif
