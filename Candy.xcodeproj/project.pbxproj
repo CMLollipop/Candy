@@ -14,6 +14,8 @@
 		3F5B96EC1BC8F70600C947F3 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F5B96EA1BC8F70600C947F3 /* HomeTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3F5B96F01BC8FA5500C947F3 /* MeinvModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96EE1BC8FA5500C947F3 /* MeinvModel.m */; settings = {ASSET_TAGS = (); }; };
 		3F5B96F41BC902CF00C947F3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B96F31BC902CF00C947F3 /* WebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3F65DE081BCB5B3B0090E843 /* Candy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F65DE061BCB5B3B0090E843 /* Candy.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		3F65DE0D1BCB5FCD0090E843 /* ManageCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F65DE0C1BCB5FCD0090E843 /* ManageCoreData.m */; settings = {ASSET_TAGS = (); }; };
 		3FC3BED21BC79A2100E498F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BED11BC79A2100E498F8 /* main.m */; };
 		3FC3BED51BC79A2100E498F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3BED41BC79A2100E498F8 /* AppDelegate.m */; };
 		3FC3BEDD1BC79A2100E498F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC3BEDC1BC79A2100E498F8 /* Assets.xcassets */; };
@@ -78,6 +80,9 @@
 		3F5B96EF1BC8FA5500C947F3 /* MeinvModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeinvModel.h; sourceTree = "<group>"; };
 		3F5B96F21BC902CF00C947F3 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		3F5B96F31BC902CF00C947F3 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		3F65DE071BCB5B3B0090E843 /* Candy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Candy.xcdatamodel; sourceTree = "<group>"; };
+		3F65DE0B1BCB5FCD0090E843 /* ManageCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageCoreData.h; sourceTree = "<group>"; };
+		3F65DE0C1BCB5FCD0090E843 /* ManageCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageCoreData.m; sourceTree = "<group>"; };
 		3FC3BECD1BC79A2100E498F8 /* Candy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Candy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC3BED11BC79A2100E498F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3FC3BED31BC79A2100E498F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -195,8 +200,8 @@
 		3F5B96ED1BC8FA4300C947F3 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				3F5B96EE1BC8FA5500C947F3 /* MeinvModel.m */,
 				3F5B96EF1BC8FA5500C947F3 /* MeinvModel.h */,
+				3F5B96EE1BC8FA5500C947F3 /* MeinvModel.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -208,6 +213,32 @@
 				3F5B96F31BC902CF00C947F3 /* WebViewController.m */,
 			);
 			name = WebView;
+			sourceTree = "<group>";
+		};
+		3F65DE051BCB5A7A0090E843 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3F65DE0A1BCB5BE30090E843 /* ManageCoreData */,
+				3F65DE091BCB5BD60090E843 /* Entity */,
+				3F65DE061BCB5B3B0090E843 /* Candy.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		3F65DE091BCB5BD60090E843 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		3F65DE0A1BCB5BE30090E843 /* ManageCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3F65DE0B1BCB5FCD0090E843 /* ManageCoreData.h */,
+				3F65DE0C1BCB5FCD0090E843 /* ManageCoreData.m */,
+			);
+			name = ManageCoreData;
 			sourceTree = "<group>";
 		};
 		3FC3BEC41BC79A2100E498F8 = {
@@ -299,6 +330,7 @@
 		3FC3BF051BC79BC100E498F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3F65DE051BCB5A7A0090E843 /* CoreData */,
 				3F5B96ED1BC8FA4300C947F3 /* Entity */,
 				3F5B96E41BC8C30500C947F3 /* Services */,
 				3F5B96DD1BC7AE7C00C947F3 /* Network */,
@@ -593,7 +625,9 @@
 				3F5B96EB1BC8F70600C947F3 /* HomeTableViewCell.m in Sources */,
 				3F5B96E71BC8C31E00C947F3 /* MeinvListService.m in Sources */,
 				3F5B96E31BC7AEA600C947F3 /* Core.m in Sources */,
+				3F65DE0D1BCB5FCD0090E843 /* ManageCoreData.m in Sources */,
 				3FC3BF101BC79F0200E498F8 /* RootTabBarController.m in Sources */,
+				3F65DE081BCB5B3B0090E843 /* Candy.xcdatamodeld in Sources */,
 				3FC3BED21BC79A2100E498F8 /* main.m in Sources */,
 				3F5B96F41BC902CF00C947F3 /* WebViewController.m in Sources */,
 				3FC3BF141BC79FCB00E498F8 /* HomeViewController.m in Sources */,
@@ -886,6 +920,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3F65DE061BCB5B3B0090E843 /* Candy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3F65DE071BCB5B3B0090E843 /* Candy.xcdatamodel */,
+			);
+			currentVersion = 3F65DE071BCB5B3B0090E843 /* Candy.xcdatamodel */;
+			path = Candy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3FC3BEC51BC79A2100E498F8 /* Project object */;
 }

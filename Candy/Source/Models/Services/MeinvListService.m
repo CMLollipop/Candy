@@ -31,12 +31,11 @@
                              
                              for (NSInteger i = 0; i<10; i++) {
                                  
-                                 NSString *key = [NSString stringWithFormat:@"%li",i];
+                                 NSString *key = [NSString stringWithFormat:@"%li",(long)i];
                                  id object = [responseObject objectForKey:key];
                                  if (object) {
                                      [array addObject:object];
                                  }
-                                 
                              }
                              
                              NSArray *objectList = [MeinvModel modelObjectListWithArray:array];

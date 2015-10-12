@@ -25,7 +25,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.myTableView];
     
-    [[Core share]httpGetMeinvListWithNum:@10
+    [[Core share]httpGetMeinvListWithNum:@20
                                  success:^(NSDictionary *responseObject) {
                                      
                                      _dataSource = [responseObject objectForKey:@"meinvList"];
@@ -38,10 +38,14 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -60,7 +64,6 @@
     if (cell == nil)
     {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"HomeTableViewCell" owner:self options:nil]lastObject];
-//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
     }
     [cell reloadData:_dataSource[indexPath.row]];
