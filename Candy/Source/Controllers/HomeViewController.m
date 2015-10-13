@@ -13,12 +13,14 @@
 #import "Meinv.h"
 #import <MJPhotoBrowser.h>
 #import <MJPhoto.h>
+#import "DMAdView.h"
 
-@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,HomeTableViewCellDelegate>
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,HomeTableViewCellDelegate,DMAdViewDelegate>
 
 @property(nonatomic,strong)UITableView *myTableView;
 @property(nonatomic,strong)NSArray *dataSource;
 @property(nonatomic,strong)NSFetchedResultsController *fetchResult;
+@property(nonatomic,strong)DMAdView *dmAdView;
 
 @end
 
@@ -38,8 +40,29 @@
         
         NSLog(@"%@",error);
     }
+    [self.view addSubview:self.dmAdView];
+    [_dmAdView loadAd];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    _dmAdView.frame = CGRectMake(0, SCREEN_HEIGHT-self.tabBarController.tabBar.frame.size.height-FLEXIBLE_SIZE.height, SCREEN_WIDTH, FLEXIBLE_SIZE.height);
+    self.myTableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-FLEXIBLE_SIZE.height);
+}
+
+- (DMAdView *)dmAdView
+{
+    if (_dmAdView) {
+        
+        return _dmAdView;
+    }
+    _dmAdView = [[DMAdView alloc]initWithPublisherId:@"56OJwpEYuN3njp+UlJ" placementId:@"16TLuvsaApnrPNUvZGjhlIts"];
+    _dmAdView.frame = CGRectMake(0, 20, SCREEN_WIDTH, FLEXIBLE_SIZE.height);
+    _dmAdView.delegate = self;
+    _dmAdView.rootViewController = self;
+    return _dmAdView;
+}
 
 - (void)httpListMeinv:(NSNumber *)lastObjectId
 {
@@ -101,7 +124,6 @@
     return  [sectionInfo numberOfObjects];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier = @"UITableViewCell";
@@ -139,7 +161,7 @@
     _myTableView.delegate = self;
     _myTableView.dataSource = self;
     [_myTableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(refresh)];
-//    [_myTableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
+    [_myTableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMore)];
 
     return _myTableView;
     
@@ -170,6 +192,43 @@
     [browser show];
 }
 
+
+// Sent when an ad request success to loaded an ad
+- (void)dmAdViewSuccessToLoadAd:(DMAdView *)adView
+{
+    NSLog(@"done");
+
+}
+// Sent when an ad request fail to loaded an ad
+- (void)dmAdViewFailToLoadAd:(DMAdView *)adView withError:(NSError *)error
+{
+    NSLog(@"done");
+
+}
+// Sent when the ad view is clicked
+- (void)dmAdViewDidClicked:(DMAdView *)adView
+{
+    NSLog(@"done");
+
+}
+// Sent just before presenting the user a modal view
+- (void)dmWillPresentModalViewFromAd:(DMAdView *)adView
+{
+    NSLog(@"done");
+
+}
+// Sent just after dismissing the modal view
+- (void)dmDidDismissModalViewFromAd:(DMAdView *)adView
+{
+    NSLog(@"done");
+
+}
+// Sent just before the application will background or terminate because the user's action
+// (Such as the user clicked on an ad that will launch App Store).
+- (void)dmApplicationWillEnterBackgroundFromAd:(DMAdView *)adView
+{
+    NSLog(@"done");
+}
 /*
 #pragma mark - Navigation
 
