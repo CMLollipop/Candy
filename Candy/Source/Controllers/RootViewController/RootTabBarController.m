@@ -27,7 +27,7 @@
     NSArray *viewControllerNames = @[@"HomeViewController",@"SecondViewController"];
     
     
-    NSArray *tabBarImages = @[@"lingerie_L",@"article"];
+    NSArray *tabBarImages = @[@"lingerie_L",@"lingerie_L"];
     NSArray *tabBarTitles = @[@"每日美女",@"奇闻趣事"];
 
 
