@@ -502,6 +502,7 @@
 				3FC3BECA1BC79A2100E498F8 /* Frameworks */,
 				3FC3BECB1BC79A2100E498F8 /* Resources */,
 				E38F9AA021BBD00D9178AC23 /* Copy Pods Resources */,
+				867CB592F349C02F6C4526DD /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -634,6 +635,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		867CB592F349C02F6C4526DD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E38F9AA021BBD00D9178AC23 /* Copy Pods Resources */ = {
@@ -835,7 +851,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cm.Candy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cm.candy.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -871,7 +887,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cm.Candy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cm.candy.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
