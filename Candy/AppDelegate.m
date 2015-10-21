@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <UMengAnalytics/MobClick.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +21,8 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [[XYRouter sharedInstance]setRootViewControllerWithControllerName:@"RootTabBarController"];
+    [MobClick startWithAppkey:@"5627a8c067e58e888b000f2d" reportPolicy:BATCH   channelId:nil];
+
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -14,6 +14,11 @@
 #import <MJPhotoBrowser.h>
 #import <MJPhoto.h>
 #import "DMAdView.h"
+#import <UMengAnalytics/MobClick.h>
+
+#import <AdSupport/AdSupport.h>
+#import <AdSupport/ASIdentifierManager.h>
+#import <SystemConfiguration/CaptiveNetwork.h>
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,HomeTableViewCellDelegate,DMAdViewDelegate>
 
@@ -209,8 +214,17 @@
 - (void)dmAdViewDidClicked:(DMAdView *)adView
 {
     NSLog(@"done");
-
+    NSDictionary *dict = @{@"idfa" :[self getIdentifierManager]};
+    [MobClick event:@"purchase1" attributes:dict];
 }
+
+-(NSString*)getIdentifierManager
+{
+    NSUUID *iden=[[ASIdentifierManager sharedManager] advertisingIdentifier];
+    //    NSLog(@"iden.UUIDString:%@",iden.UUIDString);
+    return iden.UUIDString;
+}
+
 // Sent just before presenting the user a modal view
 - (void)dmWillPresentModalViewFromAd:(DMAdView *)adView
 {
