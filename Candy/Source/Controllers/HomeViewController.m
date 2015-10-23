@@ -46,7 +46,7 @@
         NSLog(@"%@",error);
     }
     [self.view addSubview:self.dmAdView];
-    [_dmAdView loadAd];
+//    [_dmAdView loadAd];
 }
 
 - (void)viewWillAppear:(BOOL)animated
